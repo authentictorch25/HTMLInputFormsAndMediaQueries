@@ -101,6 +101,19 @@
                 else
                     mobileError.textContent = "Incorrect Mobile number";
         };
+
+        ////
+        const password = document.querySelector('#pwd');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input',
+            () => {
+                let passRegex = RegExp('^[0-9a-zA-Z]{8,}$');
+                if (passRegex.test(password.value))
+                    passwordError.textContent = '';
+                else
+                    passwordError.textContent = "Wrong Password!!!!";
+            }
+        );
     </script>
 </body>
 </html>
